@@ -1,5 +1,5 @@
 # Spanish Pre-Trained CaTrBETO Model for Sentiment Classification in Twitter 
-[Arianna Armijos](https://jingyunliang.github.io), [Jose Llumiquinga](https://www.jiezhangcao.com/), [Kevin Contreras](https://vision.ee.ethz.ch/people-details.MjYzMjMw.TGlzdC8zMjg5LC0xOTcxNDY1MTc4.html), [Sebastían Lalvay](https://cszn.github.io/), [Steven Allauca](https://scholar.google.com/citations?user=TwMib_QAAAAJ&hl=en), [Washington Pijal](https://github.com/Daniel-Qubit220)
+[Arianna Armijos](https://github.com/Ariannx), [Jose Llumiquinga](https://github.com/JoseLuis96001), [Kevin Contreras](https://github.com/KevinL97), [Sebastían Lalvay](https://github.com/leolalvay), [Steven Allauca](https://github.com/sgag26), [Washington Pijal](https://github.com/Daniel-Qubit220)
 
 Machine Learning Course, School of Mathematical and Computational Science - Yachay Tech University
 
@@ -44,17 +44,6 @@ captions_json = "/path/to/the/file"
 | Cerrada la vía a Daule a la altura de la #PenitenciariaDelLitoral en #Guayaquil. #SucreEnLaNoticia	 | PenitenciariaDelLitoral | 1 | 1 | neutral | neutral |
 | Encuentran a un privado de libertad ahorcado. La Policía comienza el conteo de fallecidos por los amotinamientos. #CrisisCarcelaria	 | CrisisCarcelaria | 0 | 0 | negativo | negativo |
 
-# Reference
 
-```
-@inproceedings{khan2021exploiting,
-  title={Exploiting BERT For Multimodal Target Sentiment Classification Through Input Space Translation},
-  author={Khan, Zaid and Fu, Yun},
-  booktitle={Proceedings of the 29th ACM International Conference on Multimedia},
-  pages={3034--3042},
-  year={2021}
-}
-
-```
 
 
