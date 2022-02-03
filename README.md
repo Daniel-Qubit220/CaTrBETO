@@ -1,48 +1,60 @@
 # Spanish Pre-Trained CaTrBETO Model for Sentiment Classification in Twitter 
-![Arch Diagram](figures/archdiag.png)
+[Arianna Armijos](https://jingyunliang.github.io), [Jose Llumiquinga](https://www.jiezhangcao.com/), [Kevin Contreras](https://vision.ee.ethz.ch/people-details.MjYzMjMw.TGlzdC8zMjg5LC0xOTcxNDY1MTc4.html), [Sebastían Lalvay](https://cszn.github.io/), [Steven Allauca](https://scholar.google.com/citations?user=TwMib_QAAAAJ&hl=en), [Washington Pijal](https://github.com/Daniel-Qubit220)
+
+Machine Learning Course, School of Mathematical and Computational Science - Yachay Tech University
+
+---
+
+[![GitHub Stars](https://img.shields.io/github/stars/Daniel-Qubit220/CaTrBETO?style=social)](https://github.com/Daniel-Qubit220/CaTrBETO)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=Daniel-Qubit220/CaTrBETO)
+[ <a href="https://colab.research.google.com/drive/1gTLMjrUAmKWmCZ6k1yDDb4cFSoHkl8ui?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>]("https://colab.research.google.com/drive/1gTLMjrUAmKWmCZ6k1yDDb4cFSoHkl8ui?usp=sharing")
+
+This repository is the official implementation of CaTrBETO: Spanish Pre-Trained Model for Sentiment Classification in Twitter
+
+![Arch Diagram](images/ML.drawio-1.png)
 # Running The Code
 ## Data 
-Download the Twitter-17 dataset [here](https://github.com/jefferyYu/TomBERT/tree/master/absa_data/twitter), and the Twitter-15 dataset [here](https://github.com/jefferyYu/TomBERT/tree/master/absa_data/twitter2015).
-You don't need the images to run the code in the repo, but if you want to download them, there are instructions in the TomBERT repo [here](https://github.com/jefferyYu/TomBERT#download-tweet-images-and-set-up-image-path).
+The database used in this paper can be found in the folder data. The images are not necessary to run the code, but They can be found [here](https://drive.google.com/drive/folders/1WFQvL3HsOWL4ODiUDj0C6SPEuJP5lz65?usp=sharing).
 
 ## Generating Captions
-The captions used in the paper are provided in the `captions/` directory.
-If you want to generate your own captions, clone the repo with `git clone --recurse-submodules` and move the file `caption_multiple.py` into the cloned [CATR](https://github.com/saahiluppal/catr/) repository. 
-Make sure all the requirements for CATR are installed, and run `caption_multiple.py`.
+The captions for replicating the results are already in the `data/` folder. However, the caption transformer can be found in the [CATR](https://github.com/saahiluppal/catr/) repository. Once the captions are gotten, run `GoogleTranslateAjaxAPI.py`.
 
 ## Training \& Evaluation
-The training/eval scripts are very straightforward, and follow the same structure.
-Looking at `EF_CapBERT_Tw15.py` as a concrete example, all you need to do is edit the following lines:
+
+To train and evaluate the CaTrBETO go to `CaTrBETO_Train.py`  and define the correct paths to the `data/` directory in the following lines.
+
+
 ```python
 train_tsv = "/path/to/the/file"
 dev_tsv = "/path/to/the/file" 
 test_tsv = "/path/to/the/file" 
 captions_json = "/path/to/the/file"
 ```
-to match where you've placed the files.
 
-# References
-If you found this paper useful, citing the paper and dataset would be greatly appreciated.
+
+## Results 
+
+
+| Tweet             | Target   |  Label | Prediction  | Label-Spanish  |  Prediction-Spanish   |
+| :---      | :---:        |        :-----:         |     :---:      |     :---:      |     :---:      |
+| Me siento orgulloso de comunicar que, el día de mañana he sido invitado a la comisión de seguridad de la @AsambleaEcuador con la finalidad de exponer propuestas de reforma, sobre la crisis carcelaria que vive el país. El cambio se logra aportando todos. #crisiscarcelaria	 |  crisiscarcelaria | 2 | 2 | positivo | positivo | 
+| Y así los hubieran atrapado, seguro los habrían soltado por falta de leyes más estrictas! Cada vez que llamamos a la @PoliciaEcuador y no atienden siempre se excusan diciendo que los patrulleros ya no se abastecen solo con el UPC de este sector.#Inseguridad #Tumbaco #puembo | Inseguridad | 1 | 0 | neutral | negativo |
+| #Historiasdelacomunidad Hay sectores que han permanecido en el abandono según indican los habitantes de varios puntos de la ciudad. La #inseguridad es preocupante pues la #delincuencia no permite a los ciudadanos circular con tranquilidad. Solicitan más resguardo policial	 | delincuencia | 0 | 0 | negativo | negativo |
+| #Inseguridad Asaltaron las cabinas de cobro en el peaje en la Vía al Pan... 6 delincuentes a bordo de una furgoneta color blanco irrumpieron en el lugar con sus armas de fuego y hasta tenían un combo para destrozar los vidrios... No se conoce monto del botín. Noticia en proceso.	 | Inseguridad | 0 | 0 | negativo | negativo |
+| Cerrada la vía a Daule a la altura de la #PenitenciariaDelLitoral en #Guayaquil. #SucreEnLaNoticia	 | PenitenciariaDelLitoral | 1 | 1 | neutral | neutral |
+| Encuentran a un privado de libertad ahorcado. La Policía comienza el conteo de fallecidos por los amotinamientos. #CrisisCarcelaria	 | CrisisCarcelaria | 0 | 0 | negativo | negativo |
+
+# Reference
+
 ```
-@inproceedings{khanExploitingBERTTranslation,
-  title = {Exploiting {{BERT}} for {{Multimodal Target Sentiment Classification Through Input Space Translation}}},
-  booktitle = {{{MM}} '21: {{The}} 29th {{ACM}} International Conference on Multimedia, Virtual Event / China October 20-24, 2021},
-  author = {Khan, Zaid and Fu, Yun},
-  year = {2021},
-  publisher = {{ACM}},
-  doi = {10.1145/3474085.3475692},
+@inproceedings{khan2021exploiting,
+  title={Exploiting BERT For Multimodal Target Sentiment Classification Through Input Space Translation},
+  author={Khan, Zaid and Fu, Yun},
+  booktitle={Proceedings of the 29th ACM International Conference on Multimedia},
+  pages={3034--3042},
+  year={2021}
 }
-```
+
 ```
 
-@inproceedings{yuAdaptingBERTTargetOriented2019,
-  title = {Adapting {{BERT}} for {{Target}}-{{Oriented Multimodal Sentiment Classification}}},
-  booktitle = {Proceedings of the {{Twenty}}-{{Eighth International Joint Conference}} on {{Artificial Intelligence}}},
-  author = {Yu, Jianfei and Jiang, Jing},
-  year = {2019},
-  month = aug,
-  pages = {5408--5414},
-  publisher = {{International Joint Conferences on Artificial Intelligence Organization}}
-}
-```
 
