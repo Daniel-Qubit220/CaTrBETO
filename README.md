@@ -14,7 +14,7 @@ This repository is the official implementation of CaTrBETO: Spanish Pre-Trained 
 ![Arch Diagram](images/ML.drawio-1.png)
 # Running The Code
 ## Data 
-The database used in this paper can be found in the folder data. The images are not necessary to run the code, but They can be found [here](https://drive.google.com/drive/folders/1WFQvL3HsOWL4ODiUDj0C6SPEuJP5lz65?usp=sharing).
+The database used in this paper can be found in the `data/` data. The images are not necessary to run the code, but They can be found [here](https://drive.google.com/drive/folders/1WFQvL3HsOWL4ODiUDj0C6SPEuJP5lz65?usp=sharing).
 
 ## Generating Captions
 The captions for replicating the results are already in the `data/` folder. However, the caption transformer can be found in the [CATR](https://github.com/saahiluppal/catr/) repository. Once the captions are gotten, run `GoogleTranslateAjaxAPI.py`.
