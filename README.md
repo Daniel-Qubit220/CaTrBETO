@@ -25,10 +25,10 @@ To train and evaluate the CaTrBETO go to `CaTrBETO_Train.py`  and define the cor
 
 
 ```python
-train_tsv = "/path/to/the/file"
-dev_tsv = "/path/to/the/file" 
-test_tsv = "/path/to/the/file" 
-captions_json = "/path/to/the/file"
+train_tsv = "/path/to/tsv/file"
+dev_tsv = "/path/to/tsv/file"
+test_tsv = "/path/to/tsv/file"
+captions_json = "/path/to/JSON/file"
 ```
 
 
