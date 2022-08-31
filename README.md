@@ -1,7 +1,5 @@
 # Spanish Pre-Trained CaTrBETO Model for Sentiment Classification in Twitter 
-[Arianna Armijos](https://github.com/Ariannx), [Jose Llumiquinga](https://github.com/JoseLuis96001), [Kevin Contreras](https://github.com/KevinL97), [Sebastían Lalvay](https://github.com/leolalvay), [Steven Allauca](https://github.com/sgag26), [Washington Pijal](https://github.com/Daniel-Qubit220)
-
-Machine Learning Course, School of Mathematical and Computational Science - Yachay Tech University
+[Washington Pijal](https://github.com/Daniel-Qubit220), [Arianna Armijos](https://github.com/Ariannx), [Jose Llumiquinga](https://github.com/JoseLuis96001), [Sebastían Lalvay](https://github.com/leolalvay), [Steven Allauca](https://github.com/sgag26), [Erick Cuenca](https://erickedu85.github.io/)
 
 ---
 
@@ -9,12 +7,15 @@ Machine Learning Course, School of Mathematical and Computational Science - Yach
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=Daniel-Qubit220/CaTrBETO)
 [ <a href="https://colab.research.google.com/drive/1gTLMjrUAmKWmCZ6k1yDDb4cFSoHkl8ui?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>]("https://colab.research.google.com/drive/1gTLMjrUAmKWmCZ6k1yDDb4cFSoHkl8ui?usp=sharing")
 
-This repository is the official implementation of CaTrBETO: Spanish Pre-Trained Model for Sentiment Classification in Twitter
+This repository is the implementation of the manuscript ***Spanish Pre-Trained CaTrBETO Model for Sentiment Classification in Twitter***
 
-![Arch Diagram](images/ML.drawio-1.png)
+>![Arch Diagram](images/ML.drawio-1.png)
+
+>The proposed architecture of the **CaTrBETO** for Spanish sentiment classification of tweets consists of 4 steps. 1) Getting a multimodal dataset including images (Tweets are all in Spanish.), 2) Applying a caption transformer (CaTr) to the images, 3) Obtaining auxiliary sentences, and  4) Classifying the sentiment of the tweet using the BETO technique.
+
 # Running The Code
 ## Data 
-The database used in this paper can be found in the `data/` data. The images are not necessary to run the code, but They can be found [here](https://drive.google.com/drive/folders/1WFQvL3HsOWL4ODiUDj0C6SPEuJP5lz65?usp=sharing).
+The database used in this paper can be found in the `data/` folder. The images are not necessary to run the code, but They can be found [here](https://drive.google.com/drive/folders/1WFQvL3HsOWL4ODiUDj0C6SPEuJP5lz65?usp=sharing).
 
 ## Generating Captions
 The captions for replicating the results are already in the `data/` folder. However, the caption transformer can be found in the [CATR](https://github.com/saahiluppal/catr/) repository. Once the captions are gotten, run `GoogleTranslateAjaxAPI.py`.
@@ -31,9 +32,8 @@ test_tsv = "/path/to/tsv/file"
 captions_json = "/path/to/JSON/file"
 ```
 
-
 ## Results 
-
+>All the tweets are in Spanish
 
 | Tweet             | Target   |  Label | Prediction  | Label-Spanish  |  Prediction-Spanish   |
 | :---      | :---:        |        :-----:         |     :---:      |     :---:      |     :---:      |
