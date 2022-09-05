@@ -15,7 +15,7 @@ This repository is the implementation of the manuscript ***Spanish Pre-Trained C
 
 # Running The Code
 ## Data 
-The database used in this paper can be found in the `data/` folder. The images are not necessary to run the code, but They can be found [here](https://drive.google.com/drive/folders/1WFQvL3HsOWL4ODiUDj0C6SPEuJP5lz65?usp=sharing).
+The database used in this paper can be found in the `data/` folder. The images are not necessary to run the code, but They can be found [here](https://drive.google.com/drive/folders/1WFQvL3HsOWL4ODiUDj0C6SPEuJP5lz65?usp=sharing). Due to the policies of the twitter API, the text of the tweets is not found, instead we have put the `Tweet ID`. Replace the tweeter ID in column `#3 String` with the content of the tweeter, keep in mind that the tweet must be clean, just the text, without icons or links. To do that, use the following link `https://twitter.com/i/web/status/XXXXXXXXX`, replace XXXXXXX with the Tweet ID 
 
 ## Generating Captions
 The captions for replicating the results are already in the `data/` folder. However, the caption transformer can be found in the [CATR](https://github.com/saahiluppal/catr/) repository. Once the captions are gotten, run `GoogleTranslateAjaxAPI.py`.
@@ -44,6 +44,9 @@ captions_json = "/path/to/JSON/file"
 | Cerrada la vía a Daule a la altura de la #PenitenciariaDelLitoral en #Guayaquil. #SucreEnLaNoticia	 | PenitenciariaDelLitoral | 1 | 1 | neutral | neutral |
 | Encuentran a un privado de libertad ahorcado. La Policía comienza el conteo de fallecidos por los amotinamientos. #CrisisCarcelaria	 | CrisisCarcelaria | 0 | 0 | negativo | negativo |
 
+
+## Licence
+[Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/ "Attribution-NonCommercial-ShareAlike 4.0 International")
 
 
 
