@@ -16,7 +16,7 @@ This repository is the implementation of the manuscript ***Spanish Pre-Trained C
 # Running The Code
 ## Data 
 
-The database used in this paper can be found in the data/ folder. The images are unnecessary to run the code, but they can be found  [here](https://drive.google.com/drive/folders/1WFQvL3HsOWL4ODiUDj0C6SPEuJP5lz65?usp=sharing).. Due to the Twitter API policies, we do not provide the tweets' text. Instead, we give the Tweet IDs to hydrate them. Replace the tweet ID in column #3 String with the tweet's text (remember that the tweet must be clean, without icons or links, just the text). To get the text, use the following link https://twitter.com/i/web/status/XXXXXXXXX. Replace XXXXXXX with the Tweet ID
+The database used in this paper can be found in the data/ folder. The images are unnecessary to run the code, but they can be found  [here](https://drive.google.com/drive/folders/1WFQvL3HsOWL4ODiUDj0C6SPEuJP5lz65?usp=sharing). Due to the Twitter API policies, we do not provide the tweets' text. Instead, we give the Tweet IDs to hydrate them. Replace the tweet ID in column #3 String with the tweet's text (remember that the tweet must be clean, without icons or links, just the text). To get the text, use the following link https://twitter.com/i/web/status/XXXXXXXXX. Replace XXXXXXX with the Tweet ID
 
 ## Generating Captions
 The captions for replicating the results are already in the `data/` folder. However, the caption transformer can be found in the [CATR](https://github.com/saahiluppal/catr/) repository. Once the captions are gotten, run `GoogleTranslateAjaxAPI.py`.
